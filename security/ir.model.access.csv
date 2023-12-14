@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_clase_clase_administrador,clase.clase,model_clase_empresas_contratadoras,group_administrador,1,1,1,1
+access_clase_clase_proyect_administrador,clase.project_project,model_clase_proyecto,group_administrador,1,1,1,1
+access_clase_clase_proyect_task_administrador,clase.project_task,model_clase_proyecto,group_administrador,1,1,1,1
+access_clase_clase_jefe_de_proyecto,clase.clase,model_clase_empresas_contratadoras,group_jefe_de_proyectos,1,1,1,1
+access_clase_clase_proyect_jefe_de_proyecto,clase.project_project,model_clase_proyecto,group_jefe_de_proyectos,1,1,1,1
+access_clase_clase_proyect_task_jefe_de_proyecto,clase.project_task,model_clase_proyecto,group_jefe_de_proyectos,1,1,1,1
+access_clase_clase_analista,clase.clase,model_clase_empresas_contratadoras,group_analista,1,0,0,0
+access_clase_clase_proyecto_analista,clase.project_project,model_clase_proyecto,group_analista,1,0,0,0
+access_clase_clase_proyecto_task_analista,clase.project_task,model_clase_proyecto,group_analista,1,0,0,0
+access_clase_clase_programador,clase.clase,model_clase_empresas_contratadoras,group_programador,1,0,0,0
+access_clase_clase_proyecto_programador,clase.project_project,model_clase_proyecto,group_programador,1,0,0,0
+access_clase_clase_proyecto_task_programador,clase.project_task,model_clase_proyecto,group_programador,1,0,0,0

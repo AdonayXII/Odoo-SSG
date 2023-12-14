@@ -1,0 +1,78 @@
+<odoo>
+  <data>
+
+    <!-- VISTA EMPRESAS CONTADORAS -->
+
+    <record model="ir.ui.view" id="clase.empresas_contratadoras_tree">
+      <field name="name">clase.empresas_contratadoras.tree</field>
+      <field name="model">clase.empresas_contratadoras</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"></field>
+          <field name="precio_bruto"></field>
+          <field name="precio_impuestos"></field>
+          <field name="proyecto"></field>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="clase.empresas_contratadoras_form">
+      <field name="name">clase.empresas_contratadoras.form</field>
+      <field name="model">clase.empresas_contratadoras</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspan="2" col="2">
+            <field name="name"></field>
+            <field name="precio_bruto"></field>
+            <field name="precio_impuestos"></field>
+            <field name="proyecto"></field>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- <record model="ir.ui.view" id="proyectos_form">
+      <field name="name">proyectos_form</field>
+      <field name="model">project.project</field>
+      <field name="inherit_id" ref="project.edit_project" />
+      <field name="arch" type="xml">
+        <field name="label_tasks" position="after">
+          <field name="Tarea"/>
+        </field>
+      </field>
+    </record> -->
+
+    <!-- ACTIONS VISTAS -->
+    <record model="ir.actions.act_window" id="empresas_contratadoras_action_window">
+      <field name="name">Empresas Contadoras</field>
+      <field name="res_model">clase.empresas_contratadoras</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- PROYECTOS -->
+    <record model="ir.actions.act_window" id="project_action_window">
+      <field name="name">Proyectos</field>
+      <field name="res_model">project.project</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <!-- TAREAS -->
+    <record model="ir.actions.act_window" id="task_action_window">
+      <field name="name">Tareas</field>
+      <field name="res_model">project.task</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- MENÚ -->
+    <menuitem name="Empresas Contratadoras" id="menu_root"></menuitem>
+    <menuitem name="Empresas Contratadoras" id="empresas_contratadoras_menu" parent="menu_root"></menuitem>
+    <menuitem name="Proyectos" id="project_menu" parent="menu_root"></menuitem>
+    <menuitem name="Tareas" id="task_menu" parent="menu_root"></menuitem>
+
+    <menuitem name="Empresas Contratadoras" id="empresas_contratadoras_menu_empresas_contratadoras" parent="empresas_contratadoras_menu" action="empresas_contratadoras_action_window"></menuitem>
+
+    <menuitem name="Proyectos" id="project_menu_menu" parent="project_menu" action="project_action_window"></menuitem>
+
+    <menuitem name="Tareas" id="task_menu_menu" parent="task_menu" action="task_action_window"></menuitem>
+
+  </data>
+</odoo>
